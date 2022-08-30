@@ -50,7 +50,7 @@ def clasify_image():
     list_image = np.asarray(list_image)
     print(list_image.shape)
     # feature = read_and_process_image(img)
-    model = tf.keras.models.load_model("./models/23082022-model_new.h5")
+    model = tf.keras.models.load_model("./models/30082022-model_new2.h5")
     predictions = model.predict(list_image)
     jenis = 0
     keterangan = ""
@@ -70,4 +70,4 @@ def clasify_image():
         }), 200
 
 if __name__ == "__main__":
-    app.run(debug=True, host="127.0.0.1", port=int(os.environ.get("PORT", 8080)))
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))

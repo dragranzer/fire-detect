@@ -1,5 +1,6 @@
 # Base image
 FROM python:3.8.10
+RUN pip install --upgrade pip
 
 # Set working directory
 WORKDIR /app
